@@ -43,3 +43,5 @@ Usage
 
 Usage is pretty straight forward: Simply press the specified keys (see configuration) (and maybe select screen area) and the screenshot will be taken and uploaded to the server. You will see a notification indicating success and the link is also copied to your clipboard.
 
+If you would like to use Puut frequently, you may want to add it to your list of startup applications. How to do this is very distro dependend, e.g in Ubuntu use `Startup Applications` to start Puut after user login. **Do not start Puut before user login, it won't work**
+
