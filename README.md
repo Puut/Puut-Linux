@@ -40,7 +40,7 @@ There sometimes is a weird error that the script is unable to create the config 
 	password = "123456"
 	#Keybindings:
 	#You can create new keybindings by adding them to the array and then adding the command parameters
-	keys = ["<Ctrl><Shift>1","<Ctrl><Shift>2","<Ctrl><Shift>3"]
+	keys = ["<Ctrl>1","<Ctrl>2","<Ctrl>3"]
 	params = ["--multidisp","--focused","--select"]
 
 Run Puut Client for the first time by typing `python puut.py` in a terminal. It creates the neccesary configuration files for you. You should now see a blue arrow in your notification bar. Then open `~/.puut/puut.conf` in your favorite text editor (or right-click the icon and select `Settings` for opening it in `gedit`). The config file is python code and you have to enter the server name and user credentials as set up for your server.
