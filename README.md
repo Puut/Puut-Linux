@@ -19,11 +19,29 @@ There are a few dependecies for running `puut.py` successfully:
 * A [Puut server](https://github.com/Puut/Puut-Server)
 
 You can install all dependencies by running
-`sudo apt-get install python pygtk python-keybinder python-requests xclip scrot libnotify-bin`
+`sudo apt-get install python python-keybinder python-requests xclip scrot libnotify-bin`
 in a terminal
+
+Maybe you need to install `pygtk` manually
 
 Configuration
 -------------
+
+There sometimes is a weird error that the script is unable to create the config file, if so, paste this into `~/.puut/puut.conf`:
+
+	
+	#This is the puut config file
+
+	#The puut server address:
+	serverAddress = "http://add.server.here:port"
+
+	#your puut credentials:
+	user = "username"
+	password = "123456"
+	#Keybindings:
+	#You can create new keybindings by adding them to the array and then adding the command parameters
+	keys = ["<Ctrl><Shift>1","<Ctrl><Shift>2","<Ctrl><Shift>3"]
+	params = ["--multidisp","--focused","--select"]
 
 Run Puut Client for the first time by typing `python puut.py` in a terminal. It creates the neccesary configuration files for you. You should now see a blue arrow in your notification bar. Then open `~/.puut/puut.conf` in your favorite text editor (or right-click the icon and select `Settings` for opening it in `gedit`). The config file is python code and you have to enter the server name and user credentials as set up for your server.
 
