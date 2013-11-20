@@ -29,7 +29,8 @@ class PuutClient:
 
 	def upload_file(self):
 		image = {"image": (open("/tmp/puut-"+self.timestamp+".png","rb"))}
-		r = requests.post(self.config["serverAddress"]+"/upload", auth=(self.config["user"],self.config["password"]),files=image)
+		headers = {'accept': 'application/json'}
+		r = requests.post(self.config["serverAddress"]+"/upload", auth=(self.config["user"],self.config["password"]),files=image,headers=headers)
 		print(r.text)
 		self.imagePath = self.config["serverAddress"]+"/" + r.text.split(":")[1].split("\"")[1] + ".png"
 
